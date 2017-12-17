@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://xu-wei.cn">
-  <title>许巍的博客</title>
+  <title>centos7 在已有python2.7情况下安装python3和pip3 | 许巍的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="许巍的博客">
-<meta property="og:url" content="http://xu-wei.cn/index.html">
+  <meta name="description" content="centos7内置python2.7及对应的pip，本文在已有python2.7情况下，兼容安装python3和pip3。">
+<meta name="keywords" content="python,pip">
+<meta property="og:type" content="article">
+<meta property="og:title" content="centos7 在已有python2.7情况下安装python3和pip3">
+<meta property="og:url" content="http://xu-wei.cn/python3_and_pip3/index.html">
 <meta property="og:site_name" content="许巍的博客">
+<meta property="og:description" content="centos7内置python2.7及对应的pip，本文在已有python2.7情况下，兼容安装python3和pip3。">
+<meta property="og:updated_time" content="2017-12-17T05:23:44.798Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="许巍的博客">
+<meta name="twitter:title" content="centos7 在已有python2.7情况下安装python3和pip3">
+<meta name="twitter:description" content="centos7内置python2.7及对应的pip，本文在已有python2.7情况下，兼容安装python3和pip3。">
   
     <link rel="alternative" href="/atom.xml" title="许巍的博客" type="application/atom+xml">
   
@@ -159,16 +164,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-python3_and_pip3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-python3_and_pip3" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/python3_and_pip3/">centos7 在已有python2.7情况下安装python3和pip3</a>
+    <h1 class="article-title" itemprop="name">
+      centos7 在已有python2.7情况下安装python3和pip3
     </h1>
   
 
@@ -181,10 +184,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>centos7内置python2.7及对应的pip，本文在已有python2.7情况下，兼容安装python3和pip3。<br>
-        
-          <a class="article-more-a" href="/python3_and_pip3/#more">more >></a>
-        
+        <p>centos7内置python2.7及对应的pip，本文在已有python2.7情况下，兼容安装python3和pip3。<br><a id="more"></a></p>
+<h2 id="1-首先下载源tar包"><a href="#1-首先下载源tar包" class="headerlink" title="1.首先下载源tar包"></a>1.首先下载源tar包</h2><p>进入官网下载<a href="https://www.python.org/downloads/source/。利用FTP传到linux系统内。或直wegt下载。" target="_blank" rel="noopener">https://www.python.org/downloads/source/。利用FTP传到linux系统内。或直wegt下载。</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://www.python.org/ftp/python/3.5.2/Python-3.5.2.tar.xz</span><br></pre></td></tr></table></figure></p>
+<h2 id="2-解压tar包"><a href="#2-解压tar包" class="headerlink" title="2.解压tar包"></a>2.解压tar包</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xvf Python-3.x.x.tar   #解压tar包到当前目录</span><br></pre></td></tr></table></figure>
+<h2 id="3-安装python3"><a href="#3-安装python3" class="headerlink" title="3.安装python3"></a>3.安装python3</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd Python-3.x.x.tar #进入解压后的目录</span><br><span class="line">mkdir /usr/local/python3    #为了不覆盖旧版本，在/usr/local下创建安装目录。</span><br><span class="line">./configure --prefix=/usr/local/python3	    #检测系统配置，生成makefile文件</span><br><span class="line">make    #编译</span><br><span class="line">make install    #安装</span><br></pre></td></tr></table></figure>
+<h2 id="4-建立链接"><a href="#4-建立链接" class="headerlink" title="4.建立链接"></a>4.建立链接</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/local/python3/bin/python3  /usr/bin/python3  #在/usr/bin下建立链接，生成python3命令</span><br></pre></td></tr></table></figure>
+<h2 id="5-运行"><a href="#5-运行" class="headerlink" title="5.运行"></a>5.运行</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Python3 #进入Python3交互式环境</span><br></pre></td></tr></table></figure>
+<p>你看到提示符&gt;&gt;&gt;就表示我们已经在Python交互式环境中了，可以输入任何Python代码，回车后会立刻得到执行结果。现在，输入exit()并回车，就可以退出Python交互式环境。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Python  #进入Python2交互式环境</span><br></pre></td></tr></table></figure></p>
+<h2 id="6-脚本安装pip3"><a href="#6-脚本安装pip3" class="headerlink" title="6.脚本安装pip3"></a>6.脚本安装pip3</h2><p>在Python中，安装第三方模块，是通过包管理工具pip完成的。根据文档，python3中自带pip，只需要运行脚本安装。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget  https://bootstrap.pypa.io/get-pip.py  #wget下载脚本</span><br><span class="line">python3 get-pip.py  #安装脚本</span><br><span class="line">pip3    #运行pip</span><br></pre></td></tr></table></figure></p>
+<p>至此，python3与pip3均已安装完毕。</p>
+
       
 
       
@@ -221,16 +230,75 @@
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/python3_and_pip3/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://xu-wei.cn/python3_and_pip3/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/goudao/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">松花江之上——狗岛</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -250,95 +318,14 @@
 
 
 
-
   
-    <article id="post-goudao" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/goudao/">松花江之上——狗岛</a>
-    </h1>
   
 
-        
-        <a href="/goudao/" class="archive-article-date">
-  	<time datetime="2016-07-11T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>松花江的中央，松浦大桥下，有一座岛，官方名叫阿勒锦洲。宋朝时期女真人在哈尔滨地区建立了阿勒锦村，“哈尔滨”就是女真“阿勒锦”的译转，包含名誉、荣誉的意思。然而，我们更习惯于叫它的小名——狗岛。“冬月乘爬犁，乘二三人行冰上，以狗驾拽，疾如马”，狗岛由通过狗拉车承担运输任务而得名。<br>这次带来的是去年秋天拍摄的图片。当时的狗岛，秋风萧瑟，一片金黄。再加上岛上的各种设施几乎都已经废弃，整个狗岛十分的萧条。<br><img src="http://oemue9j4y.bkt.clouddn.com/gdgd%20%289%29.jpg" alt=""><br>
-        
-          <a class="article-more-a" href="/goudao/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">风光摄影</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/摄影//" class="article-tag-list-link color3">摄影</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/goudao/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
+  
 
   
+
   
 
 
@@ -361,8 +348,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
