@@ -6,19 +6,39 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://xu-wei.cn">
-  <title>centos7 在已有python2.7情况下安装python3和pip3 | 许巍的博客</title>
+  <title>基于Keras的卷积神经网络图片分类器 | 许巍的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="centos7内置python2.7及对应的pip，本文在已有python2.7情况下，兼容安装python3和pip3。">
-<meta name="keywords" content="python,pip">
+  <meta name="description" content="摘  要本项目运用卷积神经网络，训练了一个图片分类器。卷积神经网络是将人工神经网络和深度学习技术结合而产生的一个新型人工神经网络方法，具有局部感知区域、层次结构化、特征抽取和分类过程结合的全局训练等特点，在图像识别领域获得了广泛的应用。卷积神经网络直接与图像像素进行卷积，从图像像素中提取图像特征，卷积神经网络的pooling层使网络需要训练的参数大大减小，简化了网络模型提高了训练的效率。本项目主要">
+<meta name="keywords" content="python,神经网络,keras">
 <meta property="og:type" content="article">
-<meta property="og:title" content="centos7 在已有python2.7情况下安装python3和pip3">
-<meta property="og:url" content="http://xu-wei.cn/python3_and_pip3/index.html">
+<meta property="og:title" content="基于Keras的卷积神经网络图片分类器">
+<meta property="og:url" content="http://xu-wei.cn/cnn/index.html">
 <meta property="og:site_name" content="许巍的博客">
-<meta property="og:description" content="centos7内置python2.7及对应的pip，本文在已有python2.7情况下，兼容安装python3和pip3。">
-<meta property="og:updated_time" content="2017-12-17T07:14:11.647Z">
+<meta property="og:description" content="摘  要本项目运用卷积神经网络，训练了一个图片分类器。卷积神经网络是将人工神经网络和深度学习技术结合而产生的一个新型人工神经网络方法，具有局部感知区域、层次结构化、特征抽取和分类过程结合的全局训练等特点，在图像识别领域获得了广泛的应用。卷积神经网络直接与图像像素进行卷积，从图像像素中提取图像特征，卷积神经网络的pooling层使网络需要训练的参数大大减小，简化了网络模型提高了训练的效率。本项目主要">
+<meta property="og:image" content="http://oemue9j4y.bkt.clouddn.com/image002.png">
+<meta property="og:image" content="http://oemue9j4y.bkt.clouddn.com/image003.jpg">
+<meta property="og:image" content="http://oemue9j4y.bkt.clouddn.com/image005.jpg">
+<meta property="og:image" content="http://oemue9j4y.bkt.clouddn.com/image006.jpg">
+<meta property="og:image" content="http://oemue9j4y.bkt.clouddn.com/image008.png">
+<meta property="og:image" content="http://oemue9j4y.bkt.clouddn.com/image011.jpg">
+<meta property="og:image" content="http://oemue9j4y.bkt.clouddn.com/image012.jpg">
+<meta property="og:image" content="http://oemue9j4y.bkt.clouddn.com/image017.jpg">
+<meta property="og:image" content="http://oemue9j4y.bkt.clouddn.com/image019.jpg">
+<meta property="og:image" content="http://oemue9j4y.bkt.clouddn.com/image020.png">
+<meta property="og:image" content="http://oemue9j4y.bkt.clouddn.com/image022.png">
+<meta property="og:image" content="http://oemue9j4y.bkt.clouddn.com/image024.png">
+<meta property="og:image" content="http://oemue9j4y.bkt.clouddn.com/image026.png">
+<meta property="og:image" content="http://oemue9j4y.bkt.clouddn.com/image028.png">
+<meta property="og:image" content="http://oemue9j4y.bkt.clouddn.com/image031.jpg">
+<meta property="og:image" content="http://oemue9j4y.bkt.clouddn.com/image033.jpg">
+<meta property="og:image" content="http://oemue9j4y.bkt.clouddn.com/image039.jpg">
+<meta property="og:image" content="http://oemue9j4y.bkt.clouddn.com/image040.png">
+<meta property="og:image" content="http://oemue9j4y.bkt.clouddn.com/image042.png">
+<meta property="og:updated_time" content="2018-05-25T05:38:37.595Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="centos7 在已有python2.7情况下安装python3和pip3">
-<meta name="twitter:description" content="centos7内置python2.7及对应的pip，本文在已有python2.7情况下，兼容安装python3和pip3。">
+<meta name="twitter:title" content="基于Keras的卷积神经网络图片分类器">
+<meta name="twitter:description" content="摘  要本项目运用卷积神经网络，训练了一个图片分类器。卷积神经网络是将人工神经网络和深度学习技术结合而产生的一个新型人工神经网络方法，具有局部感知区域、层次结构化、特征抽取和分类过程结合的全局训练等特点，在图像识别领域获得了广泛的应用。卷积神经网络直接与图像像素进行卷积，从图像像素中提取图像特征，卷积神经网络的pooling层使网络需要训练的参数大大减小，简化了网络模型提高了训练的效率。本项目主要">
+<meta name="twitter:image" content="http://oemue9j4y.bkt.clouddn.com/image002.png">
   
     <link rel="alternative" href="/atom.xml" title="许巍的博客" type="application/atom+xml">
   
@@ -164,35 +184,148 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-python3_and_pip3" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-cnn" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      centos7 在已有python2.7情况下安装python3和pip3
+      基于Keras的卷积神经网络图片分类器
     </h1>
   
 
         
-        <a href="/python3_and_pip3/" class="archive-article-date">
-  	<time datetime="2016-11-30T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-01</time>
+        <a href="/cnn/" class="archive-article-date">
+  	<time datetime="2017-06-25T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-26</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>centos7内置python2.7及对应的pip，本文在已有python2.7情况下，兼容安装python3和pip3。<br><a id="more"></a></p>
-<h2 id="1-首先下载源tar包"><a href="#1-首先下载源tar包" class="headerlink" title="1.首先下载源tar包"></a>1.首先下载源tar包</h2><p>进入官网下载<a href="https://www.python.org/downloads/source/。利用FTP传到linux系统内。或直wegt下载。" target="_blank" rel="noopener">https://www.python.org/downloads/source/。利用FTP传到linux系统内。或直wegt下载。</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://www.python.org/ftp/python/3.5.2/Python-3.5.2.tar.xz</span><br></pre></td></tr></table></figure></p>
-<h2 id="2-解压tar包"><a href="#2-解压tar包" class="headerlink" title="2.解压tar包"></a>2.解压tar包</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xvf Python-3.x.x.tar   #解压tar包到当前目录</span><br></pre></td></tr></table></figure>
-<h2 id="3-安装python3"><a href="#3-安装python3" class="headerlink" title="3.安装python3"></a>3.安装python3</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd Python-3.x.x.tar #进入解压后的目录</span><br><span class="line">mkdir /usr/local/python3    #为了不覆盖旧版本，在/usr/local下创建安装目录。</span><br><span class="line">./configure --prefix=/usr/local/python3	    #检测系统配置，生成makefile文件</span><br><span class="line">make    #编译</span><br><span class="line">make install    #安装</span><br></pre></td></tr></table></figure>
-<h2 id="4-建立链接"><a href="#4-建立链接" class="headerlink" title="4.建立链接"></a>4.建立链接</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/local/python3/bin/python3  /usr/bin/python3  #在/usr/bin下建立链接，生成python3命令</span><br></pre></td></tr></table></figure>
-<h2 id="5-运行"><a href="#5-运行" class="headerlink" title="5.运行"></a>5.运行</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Python3 #进入Python3交互式环境</span><br></pre></td></tr></table></figure>
-<p>你看到提示符&gt;&gt;&gt;就表示我们已经在Python交互式环境中了，可以输入任何Python代码，回车后会立刻得到执行结果。现在，输入exit()并回车，就可以退出Python交互式环境。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Python  #进入Python2交互式环境</span><br></pre></td></tr></table></figure></p>
-<h2 id="6-脚本安装pip3"><a href="#6-脚本安装pip3" class="headerlink" title="6.脚本安装pip3"></a>6.脚本安装pip3</h2><p>在Python中，安装第三方模块，是通过包管理工具pip完成的。根据文档，python3中自带pip，只需要运行脚本安装。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget  https://bootstrap.pypa.io/get-pip.py  #wget下载脚本</span><br><span class="line">python3 get-pip.py  #安装脚本</span><br><span class="line">pip3    #运行pip</span><br></pre></td></tr></table></figure></p>
-<p>至此，python3与pip3均已安装完毕。</p>
+        <h1 id="摘-要"><a href="#摘-要" class="headerlink" title="摘  要"></a>摘  要</h1><p>本项目运用卷积神经网络，训练了一个图片分类器。<br>卷积神经网络是将人工神经网络和深度学习技术结合而产生的一个新型人工神经网络方法，具有局部感知区域、层次结构化、特征抽取和分类过程结合的全局训练等特点，在图像识别领域获得了广泛的应用。<br>卷积神经网络直接与图像像素进行卷积，从图像像素中提取图像特征，卷积神经网络的pooling层使网络需要训练的参数大大减小，简化了网络模型提高了训练的效率。<br>本项目主要围绕卷积神经网络的网络设计和参数优化两个方面进行深入的研究。卷积神经网络分类性能的好坏很大程度决取于网络层数和网络参数，如何合理地设计卷积神经网络的卷积层，隐含层的数目和优化卷积神经网络的参数是卷积神经网络关于图像分类应用研究中非常重要的环节。<br>本项目所训练与使用的卷积神经网络是基于Keras框架编写的。使用的编程语言是Python3。通过反复更改网络参数进行测试，最终形成了一个由3卷积层，2个全连接层组成的卷积神经网络。利用CIFAR-10数据集50000个图片数据进行15次的训练，经过6小时的训练，准确率达到0.6683。</p>
+<p>关键词：卷积神经网络，深度学习，图像分类，Keras，CIFAR-10<br><a id="more"></a></p>
+<h1 id="1-设计内容"><a href="#1-设计内容" class="headerlink" title="1.设计内容"></a>1.设计内容</h1><p>本项目运用卷积神经网络，训练一个图片分类器。</p>
+<p>本项目的核心在于神经卷积网络的网络结构设计与参数的确定。通过反复更改网络参数进行测试，最终形成了一个由3卷积层，2个全连接层组成的卷积神经网络。Loss<br>function采用了categorical crossentropy，Optimizer function采用了Adam(Adaptive<br>Moment Estimation),，Activation function采用了Relu(Rectified Linear<br>Units)和Softmax。卷积层采用二维滑动窗口卷积，pooling层采用Max Pooling。</p>
+<p>本项目采用的神经网络框架为Keras。训练环境为运行centos7系统的cpu服务器。利用CIFAR-10数据集50000个图片数据进行了6小时、15批次的训练。训练后的网络以HDF5文件的格式进行保存。对10000个图片进行分类的准确率测试，网络对图片进行分类准确率达到0.6683。</p>
+<h1 id="2-设计过程"><a href="#2-设计过程" class="headerlink" title="2.设计过程"></a>2.设计过程</h1><h2 id="2-1需求分析"><a href="#2-1需求分析" class="headerlink" title="2.1需求分析"></a>2.1需求分析</h2><p>图像分类是指，根据各自在图像信息中所反映的不同特征，把不同类别的目标区分开来的图像处理方法。它利用计算机对图像进行定量分析，把图像或图像中的每个像元或区域划归为若干个类别中的某一种，以代替人的视觉判读。（如图一）</p>
+<p><img src="http://oemue9j4y.bkt.clouddn.com/image002.png" alt=""></p>
+<p><img src="http://oemue9j4y.bkt.clouddn.com/image003.jpg" alt=""></p>
+<p>图一 图像分类</p>
+<p>本项目使用卷积神经网络技术实现一个有十种分类的图片分类器，主要有一下三点需求。</p>
+<ol>
+<li><p>网络训练功能：网络的训练功能是图像分类系统的核心功能。因为对于已经设计好网络结构的同一个图像分类网络，针对不同的图像库，图像分类网络都需要重新训练才能适用不同的应用场合。</p>
+</li>
+<li><p>网络测试功能：训练完毕的图像分类系统只是极大程度拟合训练样本，但是是否适用于测试样本，都是需要经过测试样本的测试才能衡量分类系统是否能够真正使用。</p>
+</li>
+<li><p>网络迭代更新功能：网络在训练完成后，网络结构与参数以文件形式保存。当有更多训练集时，网络应当可以在原有的网络基础上用新的数据集进行网络的更新，使网络分类准确率更高。</p>
+</li>
+</ol>
+<h2 id="2-2概要设计"><a href="#2-2概要设计" class="headerlink" title="2.2概要设计"></a>2.2概要设计</h2><p>2.2.1神经网络</p>
+<p>神经网络（Neural Network，NN），也称作人工神经网络（Artificial Neural<br>Network，ANN），或神经计算（Neural<br>Computing，NC），是对人脑或生物神经网络（图二）的抽象和建模（图三），具有从环境学习的能力，以类似生物的交互方式适应环境。神经网络是智能科学和计算的重要部分，以脑科学和认知神经科学的研究成果为基础，拓展信息处理的方法，为解决复杂问题和实现自动控制提供有效的途径。</p>
+<p><img src="http://oemue9j4y.bkt.clouddn.com/image005.jpg" alt=""></p>
+<p>图二 大脑中的神经网络</p>
+<p><img src="http://oemue9j4y.bkt.clouddn.com/image006.jpg" alt=""></p>
+<p>图三 人工神经网络</p>
+<p>神经网络的学习过程就是学习权重（图三，weights）矩阵。们希望网络的输出尽可能的接近真正想要预测的值，可以通过比较当前网络的预测值和我们真正想要的目标值，再根据两者的差异情况来更新每一层的权重矩阵。下面详细介绍神经网络中各参数的作用。</p>
+<p>1.Activation function：神经网络的每层都只是做线性变换，引入了Activationfunction后（图三，Activationfunction），神经网络就有了非线性因素，神经网络更加的灵活。</p>
+<p>2.Loss function：用于衡量预测值和目标值的差异的方程。神经网络的训练是尽可能的缩小loss的过程</p>
+<p>3.Optimizer function：Optimizer是整个深度学习网络的“引擎”。选定了Loss function之后紧接着就是Optimizer function的选择。Optimizer function反向传播loss值，使loss值向当前点对应梯度的反方向不断下降。</p>
+<p>2.2.2卷积神经网络</p>
+<p>卷积运算在分析数学占有重要地位，其中包括连续型卷积运算和离散型卷积</p>
+<p>运算。下面是分析数学中离散卷积运算的公式：</p>
+<p><img src="http://oemue9j4y.bkt.clouddn.com/image008.png" alt=""></p>
+<p>卷积神经网络的卷积操作（Convolutional）属于离散卷积，但是与分析数学中的离散卷积的定义是有一些区别的。其卷积操作实际上是一个线性运算，而不是真正意义上的卷积操作，相应的卷积核也可以称为滤波器。卷积核大小确定了图像中参与运算子区域的大小，卷积核上的参数大小决定了卷积核覆盖的图像区域对应的像素点对最终卷积结果的投票能力，权值越大，投票贡献越大。卷积实现过程如图四所示。</p>
+<p><img src="http://oemue9j4y.bkt.clouddn.com/image011.jpg" alt=""></p>
+<p>图四 卷积神经网络实现过程</p>
+<p>图像在经过卷积过后，还需要通过Pooling层。Pooling是将卷积后的图片的特征提取出来。Pooling<br>层使网络需要训练的参数大大减小，简化了网络模型，提高了训练的效率。实现过程如图五所示。</p>
+<p><img src="http://oemue9j4y.bkt.clouddn.com/image012.jpg" alt=""><br>图五 Pooling</p>
+<p>在convolution与pooling之后，图片的长宽被压缩,<br>高度增加,神经网络对输入图片有更深的理解。将压缩,增高的信息输入普通的全连接神经网络。即可进行分类。convolution与pooling可以重复多次。</p>
+<p>图六 卷积神经网络</p>
+<p>2.2.3Keras</p>
+<p>Keras是一个高层神经网络API，Keras由纯Python编写而成。使用者可以选择Tensorflow或Theano作为Keras的Backend。Keras<br>为支持快速实验而生，能够把idea迅速转换为结果。Keras具有以下特点：</p>
+<p>1.用户友好： Keras提供一致而简洁的API，<br>    能够极大减少一般应用下用户的工作量，同时，Keras提供清晰和具有实践意义的bug反馈。</p>
+<p>2.模块性：模型可理解为一个层的序列或数据的运算图，完全可配置的模块可以用最少的代价自由组合在一起。具体而言，网络层、损失函数、优化器、初始化策略、激活函数、正则化方法都是独立的模块，你可以使用它们来构建自己的模型。</p>
+<p>3.易扩展性：添加新模块超级容易，只需要仿照现有的模块编写新的类或函数即可。创建新模块的便利性使得Keras更适合于先进的研究工作。</p>
+<p>4.与Python协作：Keras没有单独的模型配置文件类型。模型由python代码描述，使其更紧凑和更易debug，并提供了扩展的便利性。</p>
+<p>5.支持CNN和RNN，或二者的结合</p>
+<p>6.无缝CPU和GPU切换</p>
+<p>2.2.4CIFAR-10数据集</p>
+<p>本项目使用CIFAR-10数据集对神经网络进行训练。CIFAR-10是深度学习中经典的基准数据集，并经常用来测试深度网络性能指标。CIFAR-10数据集最初是由深度学习之父Geoffrey<br>Hintony牵头整理的。数据集包含10个类别，分别为airplane、automobile、bird、cat、deer、dog、frog、horse、ship、truck。如图所示，其中每个类别包含6000个测试样本，数据集共包含60000张图片，其中训练集50000张，测试集10000张。每张都是严格分类标注的32*32的彩图，因此不会同时出现在两个类别中。Python使用的CIFAR-10数据集，数据保存在numpy张量中。</p>
+<p><img src="http://oemue9j4y.bkt.clouddn.com/image017.jpg" alt=""></p>
+<p>图七 CIFAR-10数据集</p>
+<p>2.2.5系统总体设计</p>
+<p>本项目使用Keras构建卷积神经网络。通过反复更改网络参数进行测试，最终形成了一个由3卷积层，2个全连接层组成的卷积神经网络，还添加了Dropout层反正过拟合，添加了Flatten层将卷积后的图片张量平整为一维张量。网络结构如图八所示。</p>
+<p><img src="http://oemue9j4y.bkt.clouddn.com/image019.jpg" alt=""></p>
+<p>图八 网络结构</p>
+<h2 id="2-3详细设计"><a href="#2-3详细设计" class="headerlink" title="2.3详细设计"></a>2.3详细设计</h2><p>2.3.1数据预处理</p>
+<p> a).数据标签转为张量</p>
+<p>CIFAR-10数据集采用0-9的数字标注每张照片的种类。为了更好的分类，需要使用Keras中的to_categorical方法，将数据标签由0-9的数字转化为10维向量。这样处理也方便了采用categorical_crossentropy作为Loss<br>function。</p>
+<p>b).归一化</p>
+<p>CIFAR-10数据集中，每张32*32的图片均以（32,32,3）的numpy三阶张量保存。张量中每个条目代表一个像素。前1024个像素包含红色通道值，之后的1024个像素包含绿色通道值，最后1024像素包含蓝色通道值。每个项目的像素的亮度以0-255的数字标记。由于标签张量的数量级为101，像素的亮度数量级为103，需要对像素数据进行归一化。公式如下（x为像素亮度值）：</p>
+<p><img src="http://oemue9j4y.bkt.clouddn.com/image020.png" alt=""></p>
+<p>2.3.2Loss function</p>
+<p>Loss<br>function是用于衡量预测值和目标值的差异的方程。本项目是一个分类器项目，所以采用了categorical_crossentropy（交叉熵，亦称作多类的对数损失）作为Loss<br>function。categorical_crossentropy的计算方法如下：</p>
+<p><img src="http://oemue9j4y.bkt.clouddn.com/image022.png" alt=""></p>
+<p>采用categorical_crossentropy作为Loss<br>function，p表示真实标记的分布，q则为训练后的模型的预测标记分布，categorical_crossentropy可以衡量p与q的相似性。categorical_crossentropy作为损失函数还有一个好处是使用sigmoid函数在梯度下降时能避免均方误差损失函数学习速率降低的问题，因为学习速率可以被输出的误差所控制。</p>
+<p>2.3.2 Optimizer function</p>
+<p>Optimizer<br>function反向传播loss值，使loss值向当前点对应梯度的反方向不断下降。在本项目中，采用Adam（Adaptive<br>moment estimation，自适应矩估计）作为Optimizer<br>function。Adam能计算每个参数的自适应学习率。这个方法不仅存储了AdaDelta先前平方梯度的指数衰减平均值，而且保持了先前梯度M(t)的指数衰减平均值，这一点与动量类似。公式如下：</p>
+<p>M(t)为梯度的第一时刻平均值，V(t)为梯度的第二时刻非中心方差值。</p>
+<p><img src="http://oemue9j4y.bkt.clouddn.com/image024.png" alt=""></p>
+<p><img src="http://oemue9j4y.bkt.clouddn.com/image026.png" alt=""></p>
+<p>参数更新的最终公式为：</p>
+<p><img src="http://oemue9j4y.bkt.clouddn.com/image028.png" alt=""></p>
+<p>在本项目中，β1设为0.9，β2设为0.999，ϵ设为10-6。</p>
+<p>经过比对，Adam方法效果良好。与其他自适应学习率算法相比，其收敛速度更快，学习效果更为有效，而且可以纠正其他优化技术中存在的问题，如学习率消失、收敛过慢或是高方差的参数更新导致损失函数波动较大等问题。</p>
+<p>2.3.4Activation function</p>
+<p>神经网络的每层都只是做线性变换，在全连接层每层输出都经过Activation<br>function，神经网络就有了非线性因素，神经网络更加的灵活。</p>
+<p>全连接网络的第一层，采用了ReLu(Rectified Linear Units)作为Activation<br>function。ReLu能有效缓解梯度消失的问题。ReLu是目前深度学习中最常见的Activation<br>function。ReLu的函数图像如图九所示。</p>
+<p><img src="http://oemue9j4y.bkt.clouddn.com/image031.jpg" alt=""></p>
+<p>图九 ReLu的函数图像</p>
+<p>全连接网络的第二层，采用了softmax作为Activation<br>function。在分类器的最后一层添加softmax，可以对输出进行归一化，凸显其中最大的值并抑制低于最大值的其他分量。Softmax的函数如图十所示。</p>
+<p><img src="http://oemue9j4y.bkt.clouddn.com/image033.jpg" alt=""></p>
+<p>图十 softmax的函数图像</p>
+<p>2.3.5Convolutional</p>
+<p>本项目采用Conv2D层对图像的的空域卷积，该层对二维输入进行滑动窗卷积（如图十一）。三层卷积核（filters）数目分别为32、48、128。参数padding为same，表示对于边界数据，补0后进行处理（如图十二）。</p>
+<p><a href="http://oemue9j4y.bkt.clouddn.com/image037.jpg" target="_blank" rel="noopener"></a></p>
+<p>图十一 Convolutional</p>
+<p><img src="http://oemue9j4y.bkt.clouddn.com/image039.jpg" alt=""></p>
+<p>图十二 补0策略</p>
+<p>2.3.6Pooling</p>
+<p>本项目采用MaxPooling2D为空域信号施加最大值池化。在两个方向（竖直，水平）上的下采样因子（pool_size）均为2，将使图片在两个维度上均变为原长的一半。步长值为2。补0策略与Conv2D相同。</p>
+<p>2.3.7 Dropout</p>
+<p>Dropout层主要目的是为输入数据施加Dropout。Dropout将在训练过程中每次更新参数时随机断开一定百分比（rate）的输入神经元，Dropout层用于防止过拟合。Dropout目前没有数学解释，理论是基于直觉经验提出的。本项目Dropout层的参数为0.2，每次训练随机断开20%的神经元。</p>
+<p>2.3.8网络设计与参数调整</p>
+<p>本项目的核心在于卷积神经网络的网络设计和参数优化两个方面。卷积神经网络分类性能的好坏很大程度决取于网络层数和网络参数，如何合理地设计卷积神经网络的卷积层，隐含层的数目和优化卷积神经网络的参数是卷积神经网络关于图像分类应用研究中非常重要的环节。</p>
+<p>本项目进行了四十余次的网络设计和参数优化，下面将比较有代表性的20次调整记录如附录一。</p>
+<p>图十三为训练次数对准确率的影响</p>
+<p><img src="http://oemue9j4y.bkt.clouddn.com/image040.png" alt=""></p>
+<p>图十三 训练次数对准确率的影响</p>
+<h2 id="2-4代码实现"><a href="#2-4代码实现" class="headerlink" title="2.4代码实现"></a>2.4代码实现</h2><p>所有代码均已分享在GitHub上（<a href="https://github.com/xuwei1997/CNN）" target="_blank" rel="noopener">https://github.com/xuwei1997/CNN）</a></p>
+<p>2.4.1 convelution3.py</p>
+<p>convelution3.py文件为网络训练功能源代码。网络的训练功能是图像分类系统的核心功能。对于已经设计好网络结构的同一个图像分类网络，针对不同的图像库，图像分类网络都需要重新训练才能适用不同的应用场合。网络训练完成后，网络结构与参数将以HDF5文件保存。为了避免内存错误核心代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line">if \__name_\_ == &quot;__main__&quot;:</span><br><span class="line"></span><br><span class="line">(X_train,Y_train),(X_test,Y_test)=cifar10.load_data()</span><br><span class="line"></span><br><span class="line">Y_train=keras.utils.to_categorical(Y_train)</span><br><span class="line"></span><br><span class="line">Y_test=keras.utils.to_categorical(Y_test)</span><br><span class="line"></span><br><span class="line">print (X_train.shape, Y_train.shape, X_test.shape, Y_test.shape)</span><br><span class="line"></span><br><span class="line">model=Sequential()</span><br><span class="line"></span><br><span class="line">&gt;   model.add(convolutional.Conv2D(filters=32,kernel_size=3,strides=1,padding=&quot;same&quot;,data_format=&quot;channels_last&quot;,input_shape=X_train.shape[1:]))</span><br><span class="line"></span><br><span class="line">model.add(Activation(&quot;relu&quot;))</span><br><span class="line"></span><br><span class="line">&gt;   model.add(pooling.MaxPool2D(pool_size=2,strides=2,padding=&quot;same&quot;,data_format=&quot;channels_first&quot;))</span><br><span class="line"></span><br><span class="line">model.add(core.Dropout(0.2))</span><br><span class="line"></span><br><span class="line">model.add(convolutional.Conv2D(filters=48, kernel_size=3, strides=1,</span><br><span class="line">padding=&quot;same&quot;, data_format=&quot;channels_last&quot;, input_shape=X_train.shape[1:]))</span><br><span class="line"></span><br><span class="line">model.add(Activation(&quot;relu&quot;))</span><br><span class="line"></span><br><span class="line">model.add(pooling.MaxPool2D(pool_size=2,strides=2,padding=&quot;same&quot;,data_format=&quot;channels_first&quot;))</span><br><span class="line"></span><br><span class="line">model.add(core.Dropout(0.2))</span><br><span class="line"></span><br><span class="line">model.add(convolutional.Conv2D(filters=128, kernel_size=3, strides=1,</span><br><span class="line">padding=&quot;same&quot;, data_format=&quot;channels_last&quot;,input_shape=X_train.shape[1:]))</span><br><span class="line"></span><br><span class="line">model.add(Activation(&quot;relu&quot;))</span><br><span class="line"></span><br><span class="line">model.add(pooling.MaxPool2D(pool_size=2, strides=2, padding=&quot;same&quot;,</span><br><span class="line">data_format=&quot;channels_first&quot;))</span><br><span class="line"></span><br><span class="line">model.add(core.Dropout(0.2))</span><br><span class="line"></span><br><span class="line">model.add(core.Flatten())</span><br><span class="line"></span><br><span class="line">model.add(Dense(units=512))</span><br><span class="line"></span><br><span class="line">model.add(Activation(&quot;relu&quot;))</span><br><span class="line"></span><br><span class="line">model.add(core.Dropout(0.2))</span><br><span class="line"></span><br><span class="line">model.add(Dense(units=10))</span><br><span class="line"></span><br><span class="line">model.add(Activation(&quot;softmax&quot;))</span><br><span class="line"></span><br><span class="line">opt=keras.optimizers.Adam(lr=0.0001,decay=1e-6)</span><br><span class="line"></span><br><span class="line">model.compile(loss=&quot;categorical_crossentropy&quot;,optimizer=opt,metrics=[&apos;accuracy&apos;])</span><br><span class="line"></span><br><span class="line">for i in range(5):</span><br><span class="line"></span><br><span class="line">print (i)</span><br><span class="line"></span><br><span class="line">print</span><br><span class="line">(&quot;...........................................................................&quot;)</span><br><span class="line"></span><br><span class="line">for k in range(0,50000,32):</span><br><span class="line"></span><br><span class="line">X_data=X_train[k:k+32]/255</span><br><span class="line"></span><br><span class="line">Y_data=Y_train[k:k+32]</span><br><span class="line"></span><br><span class="line">l_a=model.train_on_batch(X_data,Y_data)</span><br><span class="line"></span><br><span class="line">print (k)</span><br><span class="line"></span><br><span class="line">print (l_a)</span><br><span class="line"></span><br><span class="line">model.save(&apos;my_model_1.h5&apos;)</span><br></pre></td></tr></table></figure>
+<p>2.4.2test.py</p>
+<p>test.py为网络测试功能源代码。训练完毕的图像分类是否适用于测试样本，需要经过测试样本的测试才能衡量分类系统是否能够真正使用。测试模块读取保存有网络结构与网络结构的HDF5文件，进行测试。核心代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">if \__name_\_ == &quot;__main__&quot;:</span><br><span class="line"></span><br><span class="line">(X_train, Y_train), (X_test, Y_test) = cifar10.load_data()</span><br><span class="line"></span><br><span class="line">Y_test = keras.utils.to_categorical(Y_test)</span><br><span class="line"></span><br><span class="line">X_test = X_test[:10000] / 255</span><br><span class="line"></span><br><span class="line">Y_test = Y_test[:10000]</span><br><span class="line"></span><br><span class="line">model=Sequential()</span><br><span class="line"></span><br><span class="line">model = load_model(&apos;my_model_1.h5&apos;)</span><br><span class="line"></span><br><span class="line">loss_and_metrics = model.evaluate(X_test, Y_test)</span><br><span class="line"></span><br><span class="line">print (&quot;&quot;)</span><br><span class="line"></span><br><span class="line">print (loss_and_metrics)</span><br></pre></td></tr></table></figure></p>
+<p>2.4.5 superposition.py</p>
+<p>网络在训练完成后，网络结构与参数以HDF5文件形式保存。当有更多训练集时，网络应当可以在原有的网络基础上用新的数据集进行网络的更新，使网络分类准确率更高。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">if \__name_\_ == &quot;__main__&quot;:</span><br><span class="line"></span><br><span class="line">(X_train,Y_train),(X_test,Y_test)=cifar10.load_data()</span><br><span class="line"></span><br><span class="line">Y_train=keras.utils.to_categorical(Y_train)</span><br><span class="line"></span><br><span class="line">Y_test=keras.utils.to_categorical(Y_test)</span><br><span class="line"></span><br><span class="line">print (X_train.shape, Y_train.shape, X_test.shape, Y_test.shape)</span><br><span class="line"></span><br><span class="line">model=Sequential()</span><br><span class="line"></span><br><span class="line">model = load_model(&apos;my_model_2.h5&apos;)</span><br><span class="line"></span><br><span class="line">for i in range(5):</span><br><span class="line"></span><br><span class="line">print (i)</span><br><span class="line"></span><br><span class="line">print</span><br><span class="line">(&quot;...........................................................................&quot;)</span><br><span class="line"></span><br><span class="line">for k in range(0,50000,32):</span><br><span class="line"></span><br><span class="line">X_data=X_train[k:k+32]/255</span><br><span class="line"></span><br><span class="line">Y_data=Y_train[k:k+32]</span><br><span class="line"></span><br><span class="line">l_a=model.train_on_batch(X_data,Y_data)</span><br><span class="line"></span><br><span class="line">print (k)</span><br><span class="line"></span><br><span class="line">print (l_a)</span><br><span class="line"></span><br><span class="line">print (model.metrics_names)</span><br><span class="line"></span><br><span class="line">loss_and_metrics = model.evaluate(X_test, Y_test)</span><br><span class="line"></span><br><span class="line">print (&quot;&quot;)</span><br><span class="line"></span><br><span class="line">print (loss_and_metrics)</span><br><span class="line"></span><br><span class="line">model.save(&apos;my_model_1.h5&apos;)</span><br></pre></td></tr></table></figure></p>
+<h2 id="2-5系统调试结果"><a href="#2-5系统调试结果" class="headerlink" title="2.5系统调试结果"></a>2.5系统调试结果</h2><p>本项目使用阿里云ESC服务器的cpu训练神经网络。经过实际运行，可以得知，以全体CIFAR-10数据集训练模型，每次进行五次完整的训练，用时约为2小时。测试的结果如图十四所示。</p>
+<p><img src="http://oemue9j4y.bkt.clouddn.com/image042.png" alt=""></p>
+<p>图十四 测试结果</p>
+<p>可以看出，经过训练后，神经网络的准确率为0.6683，误差为0.9657.</p>
+<h1 id="3-总结"><a href="#3-总结" class="headerlink" title="3.总结"></a>3.总结</h1><h2 id="3-1项目总结"><a href="#3-1项目总结" class="headerlink" title="3.1项目总结"></a>3.1项目总结</h2><p>以卷积神经网络为代表的深度网络给沉寂多年的人工神经网络带来了新的研究热点。卷积神经网络所具有的结构上的局部感知区域、层次结构使得其能够有效地将传统识别技术的特征抽取和分类两个阶段有机的集合在一起，并用反向传播算法实现了全局训练过程。卷积神经网络在图像识别领域得到了广泛的的运用。</p>
+<p>本项目主要围绕卷积神经网络的网络设计和参数优化两个方面进行深入的研究。基于Keras框架编写了一个由3卷积层，2个全连接层组成的卷积神经网络。利用CIFAR-10数据集50000个图片数据进行15次的训练，经过6小时的训练，准确率达到0.6683。</p>
+<h2 id="3-2展望"><a href="#3-2展望" class="headerlink" title="3.2展望"></a>3.2展望</h2><p>由于时间急迫，训练深度卷积神经网络需要花费更多的时间以及需要性能更加高的硬件平台等因素，本项目只设计了一个浅层卷积神经网络和一个卷积核数目相对比较少的复杂卷积神经网络。另外由于cifar-10数据库的训练样本数目只有50000个，很显然对于大规模的深度网络是绝对不够的，所以需要使用更多数目更加复杂的图像分类库对复杂卷积神经网络进行性能的测试。条件成熟时应当搭建更复杂的深度学习卷积神经网络应用更大的数据集进行训练。</p>
+<p>在实用性上，本项目还没搭建起一个通用的图片识别平台，在应用上有一定的门槛。后续研究中，应当搭建起一个通用的图片识别平台，方便使用。</p>
+<h1 id="4-参考文献"><a href="#4-参考文献" class="headerlink" title="4.参考文献"></a>4.参考文献</h1><p>1.Abadi M, Agarwal A, Barham P, et al. TensorFlow: Large-Scale MachineLearning on Heterogeneous Distributed Systems[J]. 2016.</p>
+<p>2.Wes McKinney. 利用Python进行数据分析[M].机械工业出版社, 2014.</p>
+<p>3.史忠植. 神经网络[M]. 北京:高等教育出版社, 2009.48-63</p>
+<p>4.Fredric M.Ham ,Ivica Kostanic. 神经计算原理[M].机械工业出版社, 2007. 1-70</p>
+<p>5.Mishkin D, Matas J. All you need is a good init[J]. 2015, 69(14):3013-3018.</p>
+<p>6.乐毅, 严超. 深度学习:Keras快速开发入门[M].电子工业出版社, 2017.</p>
+<p>7.吴正文. 卷积神经网络在图像分类中的应用研究[D].电子科技大学,2015.</p>
+<p>8.许可. 卷积神经网络在图像识别上的应用的研究[D].浙江大学,2012.</p>
 
       
 
@@ -236,7 +369,11 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">pip</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">神经网络</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">keras</a>
         		</li>
       		
 		</ul>
@@ -303,7 +440,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://xu-wei.cn/python3_and_pip3/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://xu-wei.cn/cnn/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -317,18 +454,9 @@
   
 <nav id="article-nav">
   
-    <a href="/cnn/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          基于Keras的卷积神经网络图片分类器
-        
-      </div>
-    </a>
   
-  
-    <a href="/dcgy/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">电磁感应定律实验装置的研发设计论文</div>
+    <a href="/python3_and_pip3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">centos7 在已有python2.7情况下安装python3和pip3</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -355,7 +483,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-首先下载源tar包"><span class="toc-number">1.</span> <span class="toc-text"><a href="#1-&#x9996;&#x5148;&#x4E0B;&#x8F7D;&#x6E90;tar&#x5305;" class="headerlink" title="1.&#x9996;&#x5148;&#x4E0B;&#x8F7D;&#x6E90;tar&#x5305;"></a>1.&#x9996;&#x5148;&#x4E0B;&#x8F7D;&#x6E90;tar&#x5305;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-解压tar包"><span class="toc-number">2.</span> <span class="toc-text"><a href="#2-&#x89E3;&#x538B;tar&#x5305;" class="headerlink" title="2.&#x89E3;&#x538B;tar&#x5305;"></a>2.&#x89E3;&#x538B;tar&#x5305;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-安装python3"><span class="toc-number">3.</span> <span class="toc-text"><a href="#3-&#x5B89;&#x88C5;python3" class="headerlink" title="3.&#x5B89;&#x88C5;python3"></a>3.&#x5B89;&#x88C5;python3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-建立链接"><span class="toc-number">4.</span> <span class="toc-text"><a href="#4-&#x5EFA;&#x7ACB;&#x94FE;&#x63A5;" class="headerlink" title="4.&#x5EFA;&#x7ACB;&#x94FE;&#x63A5;"></a>4.&#x5EFA;&#x7ACB;&#x94FE;&#x63A5;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-运行"><span class="toc-number">5.</span> <span class="toc-text"><a href="#5-&#x8FD0;&#x884C;" class="headerlink" title="5.&#x8FD0;&#x884C;"></a>5.&#x8FD0;&#x884C;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-脚本安装pip3"><span class="toc-number">6.</span> <span class="toc-text"><a href="#6-&#x811A;&#x672C;&#x5B89;&#x88C5;pip3" class="headerlink" title="6.&#x811A;&#x672C;&#x5B89;&#x88C5;pip3"></a>6.&#x811A;&#x672C;&#x5B89;&#x88C5;pip3</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#摘-要"><span class="toc-number">1.</span> <span class="toc-text"><a href="#&#x6458;-&#x8981;" class="headerlink" title="&#x6458;  &#x8981;"></a>&#x6458;  &#x8981;</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-设计内容"><span class="toc-number">2.</span> <span class="toc-text"><a href="#1-&#x8BBE;&#x8BA1;&#x5185;&#x5BB9;" class="headerlink" title="1.&#x8BBE;&#x8BA1;&#x5185;&#x5BB9;"></a>1.&#x8BBE;&#x8BA1;&#x5185;&#x5BB9;</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-设计过程"><span class="toc-number">3.</span> <span class="toc-text"><a href="#2-&#x8BBE;&#x8BA1;&#x8FC7;&#x7A0B;" class="headerlink" title="2.&#x8BBE;&#x8BA1;&#x8FC7;&#x7A0B;"></a>2.&#x8BBE;&#x8BA1;&#x8FC7;&#x7A0B;</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1需求分析"><span class="toc-number">3.1.</span> <span class="toc-text"><a href="#2-1&#x9700;&#x6C42;&#x5206;&#x6790;" class="headerlink" title="2.1&#x9700;&#x6C42;&#x5206;&#x6790;"></a>2.1&#x9700;&#x6C42;&#x5206;&#x6790;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2概要设计"><span class="toc-number">3.2.</span> <span class="toc-text"><a href="#2-2&#x6982;&#x8981;&#x8BBE;&#x8BA1;" class="headerlink" title="2.2&#x6982;&#x8981;&#x8BBE;&#x8BA1;"></a>2.2&#x6982;&#x8981;&#x8BBE;&#x8BA1;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3详细设计"><span class="toc-number">3.3.</span> <span class="toc-text"><a href="#2-3&#x8BE6;&#x7EC6;&#x8BBE;&#x8BA1;" class="headerlink" title="2.3&#x8BE6;&#x7EC6;&#x8BBE;&#x8BA1;"></a>2.3&#x8BE6;&#x7EC6;&#x8BBE;&#x8BA1;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4代码实现"><span class="toc-number">3.4.</span> <span class="toc-text"><a href="#2-4&#x4EE3;&#x7801;&#x5B9E;&#x73B0;" class="headerlink" title="2.4&#x4EE3;&#x7801;&#x5B9E;&#x73B0;"></a>2.4&#x4EE3;&#x7801;&#x5B9E;&#x73B0;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5系统调试结果"><span class="toc-number">3.5.</span> <span class="toc-text"><a href="#2-5&#x7CFB;&#x7EDF;&#x8C03;&#x8BD5;&#x7ED3;&#x679C;" class="headerlink" title="2.5&#x7CFB;&#x7EDF;&#x8C03;&#x8BD5;&#x7ED3;&#x679C;"></a>2.5&#x7CFB;&#x7EDF;&#x8C03;&#x8BD5;&#x7ED3;&#x679C;</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-总结"><span class="toc-number">4.</span> <span class="toc-text"><a href="#3-&#x603B;&#x7ED3;" class="headerlink" title="3.&#x603B;&#x7ED3;"></a>3.&#x603B;&#x7ED3;</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1项目总结"><span class="toc-number">4.1.</span> <span class="toc-text"><a href="#3-1&#x9879;&#x76EE;&#x603B;&#x7ED3;" class="headerlink" title="3.1&#x9879;&#x76EE;&#x603B;&#x7ED3;"></a>3.1&#x9879;&#x76EE;&#x603B;&#x7ED3;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2展望"><span class="toc-number">4.2.</span> <span class="toc-text"><a href="#3-2&#x5C55;&#x671B;" class="headerlink" title="3.2&#x5C55;&#x671B;"></a>3.2&#x5C55;&#x671B;</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-参考文献"><span class="toc-number">5.</span> <span class="toc-text"><a href="#4-&#x53C2;&#x8003;&#x6587;&#x732E;" class="headerlink" title="4.&#x53C2;&#x8003;&#x6587;&#x732E;"></a>4.&#x53C2;&#x8003;&#x6587;&#x732E;</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -371,7 +499,7 @@
   
 
   
-  <div id="SOHUCS" sid="python3_and_pip3" ></div> 
+  <div id="SOHUCS" sid="cnn" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
