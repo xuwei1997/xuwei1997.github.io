@@ -1,1 +1,1 @@
-xu-wei.cn
+xuwei.pro
