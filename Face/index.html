@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.xuwei.pro">
-  <title>Archives: 2020/2 | 许巍的博客</title>
+  <title>毕业设计：基于深度学习的人脸美丽评分系统设计（摘要节选） | 许巍的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="许巍的博客">
-<meta property="og:url" content="http://www.xuwei.pro/archives/2020/02/index.html">
+  <meta name="description" content="美是人类共同的追求，人脸美丽是人体美的重要组成部分。如何对人脸美丽程度进行评判是一个重要的研究方向。从上个世纪中期开始，心理学、生物学、社会学和计算机科学等各个方面的学者都对人脸美丽问题进行了广泛的探究。研究显示不同的人群对人脸的评价存在一致性，为本设计提供了可行性。 在线测试网站:zhu.xuwei.pro">
+<meta name="keywords" content="python,神经网络,keras,深度学习,迁移学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="毕业设计：基于深度学习的人脸美丽评分系统设计（摘要节选）">
+<meta property="og:url" content="http://www.xuwei.pro/Face/index.html">
 <meta property="og:site_name" content="许巍的博客">
+<meta property="og:description" content="美是人类共同的追求，人脸美丽是人体美的重要组成部分。如何对人脸美丽程度进行评判是一个重要的研究方向。从上个世纪中期开始，心理学、生物学、社会学和计算机科学等各个方面的学者都对人脸美丽问题进行了广泛的探究。研究显示不同的人群对人脸的评价存在一致性，为本设计提供了可行性。 在线测试网站:zhu.xuwei.pro">
+<meta property="og:updated_time" content="2020-03-24T15:43:54.343Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="许巍的博客">
+<meta name="twitter:title" content="毕业设计：基于深度学习的人脸美丽评分系统设计（摘要节选）">
+<meta name="twitter:description" content="美是人类共同的追求，人脸美丽是人体美的重要组成部分。如何对人脸美丽程度进行评判是一个重要的研究方向。从上个世纪中期开始，心理学、生物学、社会学和计算机科学等各个方面的学者都对人脸美丽问题进行了广泛的探究。研究显示不同的人群对人脸的评价存在一致性，为本设计提供了可行性。 在线测试网站:zhu.xuwei.pro">
   
     <link rel="alternative" href="/atom.xml" title="许巍的博客" type="application/atom+xml">
   
@@ -159,56 +164,99 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Face" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/kqzl/" class="archive-article-date">
-  	<time datetime="2020-02-24T15:57:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-24</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/kqzl/">空气质量检测系统</a>
+    <h1 class="article-title" itemprop="name">
+      毕业设计：基于深度学习的人脸美丽评分系统设计（摘要节选）
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/Face/" class="archive-article-date">
+  	<time datetime="2019-07-21T12:34:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>美是人类共同的追求，人脸美丽是人体美的重要组成部分。如何对人脸美丽程度进行评判是一个重要的研究方向。从上个世纪中期开始，心理学、生物学、社会学和计算机科学等各个方面的学者都对人脸美丽问题进行了广泛的探究。研究显示不同的人群对人脸的评价存在一致性，为本设计提供了可行性。</p>
+<p>在线测试网站:<a href="http://zhu.xuwei.pro" target="_blank" rel="noopener">zhu.xuwei.pro</a><br><a id="more"></a></p>
+<p>设计从大数据与深度学习领域对人脸美丽问题进行研究，利用现有数据集，通过迁移学习的方法，训练了人脸美丽深度卷积神经网络。设计的核心工作是探究了迁移学习的学习策略和不同迁移学习模型的性能，创新之处是设计了一个通用的人脸美丽评分平台供用户使用。</p>
+<ol>
+<li>对SCUT-FBP5500数据集进行了处理。利用OpenCV中的Haar特征分类器提取出了人脸并保存为220<em>220</em>3图片。求出了每张照片的平均打分。将人脸图片与打分数据转化为了numpy矩阵保存以便在迁移学习中使用。</li>
+<li>探究了迁移学习的三种学习策略，仅冻结、仅微调、冻结后微调。以VGG19模型为例探究，最终得出了迁移学习的最佳完整路径。即先修改最后一层网络的输入输出类别为实验要求的类别后，装载已保存的预训练的模型参数。首先在输出层设置较快的学习速率，冻结其他层，仅训练输出层；然后对所有层以较低的学习率进行微调。</li>
+<li>探究AlexNet、VGG、ResNet、DenseNet模型运用在人脸美丽问题上的性能。DenseNet121模型是误差最小的模型，且训练时间较短，保存为HDF5文件后，文件大小较小。DenseNet121模型是人脸美丽问题上较优秀的一种模型。其他模型也各有特点，适合在不同场合使用。</li>
+<li>为了非专业人士更方便的使用人脸美丽评分，还设计了一个人脸美丽评分系统。用户可以在网站上传含有人脸的图片并获取打分信息，还可以实时采集摄像头视频流进行人脸评分。</li>
+</ol>
+<p>关键词： 人脸美丽，深度学习，迁移学习，卷积神经网络，大数据
+ </p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/photo/wxqb.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">嵌入式</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">硬件</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">神经网络</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">keras</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">深度学习</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">迁移学习</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -221,17 +269,136 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://www.xuwei.pro/Face/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/kqzl/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          空气质量检测系统
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/cnn/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">基于Keras的卷积神经网络图片分类器</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    目录，不存在的…
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+  <div id="SOHUCS" sid="Face" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "cytmXc7os",
+        conf: "prod_193f2315071cbabd6e7a4b1b86821945"
+    });
+</script>
+</script>
+  
+
+  
+
+  
 
 
           </div>
@@ -260,8 +427,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
