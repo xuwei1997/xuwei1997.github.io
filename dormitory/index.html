@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://www.xuwei.pro">
   <title>宿舍分配程序 | 许巍的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、前言学生宿舍分配一直是一个具有现实意义的问题。最近，受到了我初中母校老师的邀请，开发了一个宿舍分配小程序。在这之前，国主要采用人工直接按学院班级学号分配宿舍。这种传统的宿舍分配方式效率低、易出错。本程序采用python编写，利用了贪心算法贪心匹配宿舍，大幅度提高了分配宿舍的效率及准确度。">
+  <meta name="description" content="一、前言学生宿舍分配一直是一个具有现实意义的问题。最近，受到了我初中母校老师的邀请，开发了一个宿舍分配小程序。在这之前，主要采用人工直接按年级班级学号分配宿舍。这种传统的宿舍分配方式效率低、易出错。本程序采用python编写，仿照内存连续分配最佳适应算法（best fit, BF），贪心匹配宿舍，大幅度提高了分配宿舍的效率及准确度。">
 <meta name="keywords" content="python,pandas">
 <meta property="og:type" content="article">
 <meta property="og:title" content="宿舍分配程序">
 <meta property="og:url" content="http://www.xuwei.pro/dormitory/index.html">
 <meta property="og:site_name" content="许巍的博客">
-<meta property="og:description" content="一、前言学生宿舍分配一直是一个具有现实意义的问题。最近，受到了我初中母校老师的邀请，开发了一个宿舍分配小程序。在这之前，国主要采用人工直接按学院班级学号分配宿舍。这种传统的宿舍分配方式效率低、易出错。本程序采用python编写，利用了贪心算法贪心匹配宿舍，大幅度提高了分配宿舍的效率及准确度。">
-<meta property="og:updated_time" content="2020-03-24T15:25:44.237Z">
+<meta property="og:description" content="一、前言学生宿舍分配一直是一个具有现实意义的问题。最近，受到了我初中母校老师的邀请，开发了一个宿舍分配小程序。在这之前，主要采用人工直接按年级班级学号分配宿舍。这种传统的宿舍分配方式效率低、易出错。本程序采用python编写，仿照内存连续分配最佳适应算法（best fit, BF），贪心匹配宿舍，大幅度提高了分配宿舍的效率及准确度。">
+<meta property="og:updated_time" content="2020-03-25T03:19:21.147Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="宿舍分配程序">
-<meta name="twitter:description" content="一、前言学生宿舍分配一直是一个具有现实意义的问题。最近，受到了我初中母校老师的邀请，开发了一个宿舍分配小程序。在这之前，国主要采用人工直接按学院班级学号分配宿舍。这种传统的宿舍分配方式效率低、易出错。本程序采用python编写，利用了贪心算法贪心匹配宿舍，大幅度提高了分配宿舍的效率及准确度。">
+<meta name="twitter:description" content="一、前言学生宿舍分配一直是一个具有现实意义的问题。最近，受到了我初中母校老师的邀请，开发了一个宿舍分配小程序。在这之前，主要采用人工直接按年级班级学号分配宿舍。这种传统的宿舍分配方式效率低、易出错。本程序采用python编写，仿照内存连续分配最佳适应算法（best fit, BF），贪心匹配宿舍，大幅度提高了分配宿舍的效率及准确度。">
   
     <link rel="alternative" href="/atom.xml" title="许巍的博客" type="application/atom+xml">
   
@@ -184,7 +184,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h2><p>学生宿舍分配一直是一个具有现实意义的问题。最近，受到了我初中母校老师的邀请，开发了一个宿舍分配小程序。在这之前，国主要采用人工直接按学院班级学号分配宿舍。这种传统的宿舍分配方式效率低、易出错。本程序采用python编写，利用了贪心算法贪心匹配宿舍，大幅度提高了分配宿舍的效率及准确度。</p>
+        <h2 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h2><p>学生宿舍分配一直是一个具有现实意义的问题。最近，受到了我初中母校老师的邀请，开发了一个宿舍分配小程序。在这之前，主要采用人工直接按年级班级学号分配宿舍。这种传统的宿舍分配方式效率低、易出错。本程序采用python编写，仿照内存连续分配最佳适应算法（best fit, BF），贪心匹配宿舍，大幅度提高了分配宿舍的效率及准确度。</p>
 <a id="more"></a>
 <p>github地址：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/xuwei1997/Dormitory</span><br></pre></td></tr></table></figure></p>
 <h2 id="二、分配原则"><a href="#二、分配原则" class="headerlink" title="二、分配原则"></a>二、分配原则</h2><p>对于如何进行宿舍分配，老师提出了几个需求：</p>
@@ -199,7 +199,7 @@
 </ol>
 <h2 id="三、贪心算法"><a href="#三、贪心算法" class="headerlink" title="三、贪心算法"></a>三、贪心算法</h2><p>对需求进行分析，可以发现，需要遍历完所有的可能组合才能得出最优解。但是如果遍历完所有组合，时间复杂度将会非常高。可以判定，这个问题是一个NP完全问题。故我决定使用贪心算法对最优解进行近似模拟。</p>
 <p>贪心算法是一种简化解题复杂度的算法，不追求最优解，不用回溯，只希望得到较为满意的解。它的基本思想是：从问题的某一个初始解出发，采用逐步 构造当前状态下最优解，以尽可能快的速度逐步逼近给定的目标的搜索方法。贪心算法不在整体上考虑最优，而是把整个问题分成多个阶段，保证在每个阶段求出当前看来的最优解，并且一旦求出解就不再更改。虽然贪心算法不是对所有问题都能得到整体最优解，但对于NP问题来说，它是一种最直接的算法设计技术，通过一系列局部最优的解的选择，贪心算法可以产生整体的最优解。</p>
-<p>我从内存连续分配算法中得到灵感，编写了程序，具体算法步骤如下：</p>
+<p>我从内存连续分配最佳适应算法（best fit, BF）中得到灵感，编写了程序，具体算法步骤如下：</p>
 <ol>
 <li>将学生表和宿舍表按性别分开处理。</li>
 <li>将学生表按全宿和半宿分开。</li>
@@ -359,8 +359,8 @@
 <nav id="article-nav">
   
   
-    <a href="/kqzl/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">空气质量检测系统</div>
+    <a href="/Face/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">毕业设计：基于深度学习的人脸美丽评分系统设计（摘要节选）</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -531,6 +531,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">pandas</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">嵌入式</a>
               </li>
              
@@ -543,19 +547,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">pandas</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">pip</a>
+                <a href="javascript:void(0)" class="js-tag color3">摄影</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">摄影</a>
+                <a href="javascript:void(0)" class="js-tag color4">pip</a>
               </li>
             
             <div class="clearfix"></div>
